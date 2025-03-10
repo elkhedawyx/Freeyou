@@ -1,0 +1,104 @@
+/* خلفية الصفحة بلون شبيه بإنستجرام */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa; /* لون خلفية إنستجرام */
+  margin: 0;
+  padding: 0;
+}
+
+/* الصندوق الأبيض الذي يحوي نموذج تسجيل الدخول */
+.login-box {
+  width: 350px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+/* شعار الموقع C.F */
+.logo {
+  font-family: "Scheherazade", "Droid Arabic Kufi", cursive, sans-serif; /* خط رقعة بديل */
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #262626; /* لون النص */
+}
+
+/* لمسة شخصية: نص صغير تحت الشعار */
+.tagline {
+  font-size: 14px;
+  color: #8e8e8e;
+  margin-bottom: 20px;
+}
+
+/* نموذج الإدخال */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* حقول الإدخال */
+.login-box input {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background: #fafafa;
+  outline: none;
+}
+
+/* زر تسجيل الدخول */
+.login-box button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0095f6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #0078d4;
+}
+
+/* فقرة الروابط أسفل النموذج */
+.extra-links {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+.extra-links a {
+  color: #0095f6;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* تعديل بسيط للوسائط الصغيرة */
+@media (max-width: 400px) {
+  .login-box {
+    width: 90%;
+    padding: 30px 15px;
+  }
+  .logo {
+    font-size: 36px;
+  }
+  .tagline {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,154 @@
+/* الحاوية الأساسية للبروفايل */
+.profile-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+/* هيدر البروفايل */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #e1306c; /* لون إنستجرام */
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* إحصائيات البروفايل (Posts, Followers, Following) */
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.profile-stats div {
+  text-align: center;
+}
+
+.profile-stats div p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* زر Edit Profile */
+.edit-profile-btn {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 5px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.edit-profile-btn:hover {
+  background-color: #fafafa;
+}
+
+/* البايو */
+.bio {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* تبويبات البروفايل */
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #dbdbdb;
+  margin-top: 20px;
+}
+
+.profile-tabs button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  color: #888;
+  position: relative;
+}
+
+.profile-tabs button:hover {
+  color: #333;
+}
+
+.profile-tabs button.active {
+  color: #000;
+}
+
+.profile-tabs button.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #00ff22,
+    #00cfff,
+    #2a00ff,
+    #aa00ff
+  );
+  background-size: 200% 200%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* تأثير لمعان للتبويب النشط */
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* محتوى التبويبات */
+.profile-content {
+  margin-top: 20px;
+  min-height: 150px; /* بس عشان الشكل يبقى واضح */
+}
+
+/* Grid للمنشورات */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.post-item {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
