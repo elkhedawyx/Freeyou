@@ -1,7 +1,7 @@
 /* تحسين تصميم Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /* يوزع العناصر بالتساوي */
   align-items: center;
   background-color: #fff;
   padding: 10px 15px;
@@ -10,7 +10,6 @@
   bottom: 0;
   width: 100%;
   z-index: 1000;
-  max-width: 100%;
 }
 
 /* توزيع العناصر بالتساوي داخل Navbar */
@@ -23,13 +22,13 @@
   font-size: 12px;
   flex: 1; /* توزيع المساحة بالتساوي */
   text-align: center;
-  gap: 3px; /* مسافة صغيرة بين الأيقونة والنص */
+  gap: 3px;
   transition: color 0.3s ease-in-out;
 }
 
 /* تحسين أيقونات Navbar */
 .nav-link i {
-  font-size: 22px; /* تكبير الأيقونة */
+  font-size: 22px;
   margin-bottom: 5px;
 }
 
@@ -46,10 +45,10 @@
   }
 
   .nav-link {
-    font-size: 10px; /* تصغير حجم النص */
+    font-size: 10px;
   }
 
   .nav-link i {
-    font-size: 18px; /* تقليل حجم الأيقونات */
+    font-size: 18px;
   }
 }
