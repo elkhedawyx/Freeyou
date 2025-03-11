@@ -1,21 +1,25 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/SplashScreen.css"; // هنضيف ملف CSS للتحكم في الأنميشن
+import "./SplashScreen.css";
 
-function SplashScreen() {
+const SplashScreen = () => {
   const navigate = useNavigate();
-  const [fadeOut, setFadeOut] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setFadeOut(true), 2000); // بعد 2 ثانية، نبدأ في الإخفاء
-    setTimeout(() => navigate("/"), 2500); // بعد 2.5 ثانية، ننتقل لصفحة تسجيل الدخول
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+      navigate("/"); // بعد انتهاء اللوجو، يروح لصفحة تسجيل الدخول
+    }, 3000); // مدة الظهور 3 ثواني
+
+    return () => clearTimeout(timer);
   }, [navigate]);
 
-  return (
-    <div className={`splash-screen ${fadeOut ? "fade-out" : ""}`}>
-      <img src="/logo.png" alt="Logo" className="logo" />
+  return isVisible ? (
+    <div className="splash-container">
+      <img src="/logo.png" alt="Logo" className="splash-logo" />
     </div>
-  );
-}
+  ) : null;
+};
 
 export default SplashScreen;
