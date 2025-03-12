@@ -1,5 +1,5 @@
+// src/App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import SplashScreen from "./pages/SplashScreen";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CompleteProfile from "./pages/CompleteProfile";
@@ -21,9 +21,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* شاشة البداية */}
-        <Route path="/splash" element={<SplashScreen />} />
-        
         {/* صفحات المصادقة */}
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
